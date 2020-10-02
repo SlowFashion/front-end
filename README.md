@@ -8,7 +8,8 @@
     - item search
     - user cart
     - checkout(paypal/stripe)
-    - a way to view purchases 
+    - a way to view purchases
+    - user needs a way to edit account details like email, password(with password reset)
     
     
     
