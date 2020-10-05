@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Button, Container} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import {primaryBgColor, btnColor} from './themes/color';
+import {NavLink} from 'react-router-dom'
 
 const useStyles = makeStyles({
     root: {
@@ -52,7 +53,9 @@ const Jumbotron = () => {
                 <Typography variant='body1' className={classes.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem, molestias at distinctio minima dolores temporibus voluptatum aspernatur ipsum perspiciatis sint cum tenetur culpa fugiat in accusantium cumque quisquam excepturi.</Typography>
             </Box>
             <Box className={classes.right}>
+                <NavLink style={{textDecoration:'none'}} to='/createAccount'>
                 <Button className={classes.btn} variant='outlined' size='medium'>Create Account</Button>
+                </NavLink>
             </Box>
 
         </Box>

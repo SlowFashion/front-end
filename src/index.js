@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {green} from '@material-ui/core/colors';
-import {makeStyles, createMuiTheme, MuiThemeProvider, createPallette} from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
+import { makeStyles, createMuiTheme, MuiThemeProvider, createPallette } from '@material-ui/core/styles';
 
 const btntheme = createMuiTheme({
   pallete: {
@@ -13,11 +14,13 @@ const btntheme = createMuiTheme({
 });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <MuiThemeProvider theme={btntheme}>
-    <App />
-    </MuiThemeProvider>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <MuiThemeProvider theme={btntheme}>
+        <App />
+      </MuiThemeProvider>
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
