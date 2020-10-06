@@ -5,6 +5,7 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import StarOutlinedIcon from '@material-ui/icons/StarOutlined';
 import { data } from '../data/testData1';
 import { primaryBgColor } from './themes/color';
+import {NavLink,Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,6 +47,12 @@ const useStyles = makeStyles((theme) => ({
     },
     tile:{
         cursor:'pointer'
+    },
+    img:{
+        top: "50%",
+    width: '100%',
+    position: 'relative',
+    transform: 'translateY(-50%)',
     }
 }));
 
@@ -56,7 +63,10 @@ const Items = () => {
             <GridList cellHeight={300} spacing={1} className={classes.gridList}>
                 {data.map((tile) => (
                     <GridListTile className={classes.tile} key={tile.img} cols={tile.featured ? 1 : .6} rows={tile.featured ? 1 : 1}>
-                        <img src={tile.image} alt={tile.title} />
+                        <NavLink to={`/product/${tile._id}`}>
+                        <img className={classes.img} src={tile.image} alt={tile.title} />
+                        </NavLink>
+                        
                         <GridListTileBar
                             title={tile.title}
                             titlePosition="top"
@@ -65,7 +75,11 @@ const Items = () => {
                                     <IconButton aria-label={`star ${tile.title}`} className={classes.icon}>
                                         <StarBorderIcon/>
                                     </IconButton>
-                                    <Typography className={classes.itemName} variant='p'>{tile.name}</Typography>
+                                    <Link style={{textDecoration:'none'}}to={`/product/${tile._id}`}>
+                                        <Typography className={classes.itemName} variant='p'>{tile.name}</Typography>
+
+                                    </Link>
+
                                 </Box>
                             }
                             actionPosition="left"

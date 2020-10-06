@@ -4,7 +4,9 @@ import './App.css';
 import Home from './pages/home';
 import CreateAccount from './pages/createAccount';
 import SignIn from './pages/signIn';
+import Product from './pages/product';
 import { Route } from 'react-router-dom';
+
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
       <Route exact path='/' component={Home} />
       <Route exact path='/createAccount' component={CreateAccount} />
       <Route exact path='/signIn' component={SignIn} />
+      <Route exact path='/product/:id' component={Product} />
     </div>
   );
 }

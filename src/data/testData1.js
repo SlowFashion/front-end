@@ -7,6 +7,7 @@ import pic3 from './img/tyler-nix-VpR8ZwcogAw-unsplash.jpg';
 
 export const data = [
     {
+        _id:1,
         name:'flannel shirt',
         category:'Shirts',
         image:pic1,
@@ -17,6 +18,7 @@ export const data = [
            
     },
     {
+        _id:2,
         name:'slacks',
         category:'Pants',
         image:pic1,
@@ -26,6 +28,7 @@ export const data = [
         numReviews:10   
     },
     {
+        _id:3,
         name:'Cardigan',
         category:'sweater',
         image: pic1,
@@ -35,6 +38,7 @@ export const data = [
         numReviews:0   
     },
     {
+        _id:4,
         name:'jean jacket',
         category:'jacket',
         image:pic2,
@@ -44,6 +48,7 @@ export const data = [
         numReviews:10   
     },
     {
+        _id:5,
         name:'Floral shirt',
         category:'Shirts',
         image:pic3,
@@ -53,6 +58,7 @@ export const data = [
         numReviews:10   
     },
     {
+        _id:6,
         name:'flannel shirt',
         category:'Shirts',
         image:pic1,
@@ -62,6 +68,7 @@ export const data = [
         numReviews:10   
     },
     {
+        _id:7,
         name:'slacks',
         category:'Pants',
         image:pic1,
@@ -71,6 +78,7 @@ export const data = [
         numReviews:10   
     },
     {
+        _id:8,
         name:'Cardigan',
         category:'sweater',
         image: pic1,
@@ -80,6 +88,7 @@ export const data = [
         numReviews:0   
     },
     {
+        _id:9,
         name:'jean jacket',
         category:'jacket',
         image:pic2,
@@ -89,6 +98,7 @@ export const data = [
         numReviews:10   
     },
     {
+        _id:10,
         name:'Floral shirt',
         category:'Shirts',
         image:pic3,
