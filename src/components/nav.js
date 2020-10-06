@@ -39,7 +39,7 @@ const useStyles = makeStyles({
 
 });
 
-const Nav = () => {
+const Nav = ({login}) => {
 
     const classes = useStyles();
 
@@ -57,8 +57,8 @@ const Nav = () => {
                             </Badge>
                         </IconButton>
                         <Link style={{textDecoration:'none'}} to='/signIn'>
+                        {!login ? <Button size="large" variant='outlined' className={classes.toolbarButton}>Login</Button> : ""}
 
-                        <Button size="large" variant='outlined' className={classes.toolbarButton}>Login</Button>
                         </Link>
                     </Box>
 

@@ -12,7 +12,8 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import primaryImg from '../img/primaryImage.jpg'
+import primarySignInImg from '../img/primarySignInImg.jpg'
+import {NavLink} from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -31,11 +32,11 @@ const useStyles = makeStyles((theme) => ({
 
   root: {
     height: '80vh',
-    width:'100vh',
+    width:'90%',
 
   },
   image: {
-    backgroundImage: `url(${primaryImg})`,
+    backgroundImage: `url(${primarySignInImg})`,
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -122,15 +123,16 @@ const SignInForm = () => {
               Sign In
             </Button>
             <Grid container>
-              <Grid item xs>
+              <Grid item xs className={classes.forgotPass}>
                 <Link href="#" variant="body2">
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                
+                <NavLink to='/createAccount'>
                   {"Don't have an account? Sign Up"}
-                </Link>
+                </NavLink>
               </Grid>
             </Grid>
             <Box mt={5}>

@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
   root: {
     height: '80vh',
-    width:'100vh',
+    width:'90%',
 
   },
   image: {

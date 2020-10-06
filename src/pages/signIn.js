@@ -5,8 +5,8 @@ import SignIn from '../components/signInForm';
 const CreateAccount = () => {
     return(
         <>
-        <Nav />
-        <SignIn />
+        <Nav login={true}/>
+        <SignIn  />
         </>
     );
    
