@@ -1,2 +1,2 @@
-export const primaryBgColor = "#F6FAFF";
+export const primaryBgColor = "white";
 export const btnColor = "#5DE75A";

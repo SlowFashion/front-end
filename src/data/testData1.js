@@ -11,7 +11,9 @@ export const data = [
         name:'flannel shirt',
         category:'Shirts',
         image:pic1,
+        imageLib:[pic2,pic3],
         price:15.99,
+        size:'M',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>
         🎾colour: grey
@@ -44,8 +46,10 @@ export const data = [
         name:'slacks',
         category:'Pants',
         image:pic1,
+        imageLib:[pic2,pic3],
         price:20,
         madeBy:'kim',
+        size:'M',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>
         🎾colour: grey
@@ -76,7 +80,9 @@ export const data = [
         name:'jean jacket',
         category:'jacket',
         image:pic2,
+        imageLib:[pic2,pic3],
         price:15.99,
+        size:'M',
         madeBy:'kim',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>
@@ -108,7 +114,9 @@ export const data = [
         name:'Floral shirt',
         category:'Shirts',
         image:pic3,
+        imageLib:[pic2,pic3],
         price:15.99,
+        size:'M',
         madeBy:'kim',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>
@@ -140,7 +148,9 @@ export const data = [
         name:'flannel shirt',
         category:'Shirts',
         image:pic1,
+        imageLib:[pic2,pic3],
         price:15.99,
+        size:'M',
         madeBy:'kim',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>
@@ -172,7 +182,9 @@ export const data = [
         name:'slacks',
         category:'Pants',
         image:pic1,
+        imageLib:[pic2,pic3],
         price:20,
+        size:'M',
         madeBy:'kim',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>
@@ -204,7 +216,9 @@ export const data = [
         name:'Cardigan',
         category:'sweater',
         image: pic1,
+        imageLib:[pic2,pic3],
         price:15.99,
+        size:'M',
         madeBy:'kim',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>
@@ -236,7 +250,9 @@ export const data = [
         name:'jean jacket',
         category:'jacket',
         image:pic2,
+        imageLib:[pic2,pic3],
         price:15.99,
+        size:'M',
         madeBy:'kim',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>
@@ -268,7 +284,9 @@ export const data = [
         name:'Floral shirt',
         category:'Shirts',
         image:pic3,
+        imageLib:[pic2,pic3],
         price:15.99,
+        size:'M',
         madeBy:'kim',
         description:`<p class="Text-yok90d-0 styles__DescriptionContainer-uwktmu-9 bWcgji">💧Tommy Hilfiger quarter zip knit with buttons too - embroidered logo on cuff 
         <br><br>

@@ -3,6 +3,8 @@ import { AppBar, Typography, Toolbar, Button, Badge, IconButton, Box } from '@ma
 import { makeStyles } from '@material-ui/core/styles';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {Link} from  'react-router-dom';
+import {primaryBgColor} from './themes/color';
+import {primaryBtn} from './themes/components';
 
 const useStyles = makeStyles({
     root: {
@@ -10,21 +12,14 @@ const useStyles = makeStyles({
     },
     nav: {
         minHeight: "50px",
-        background: "#F6FAFF"
+        background: primaryBgColor
     },
     logo: {
         color: "black",
         fontFamily: "'Roboto', sans-serif",
     },
     toolbarButton: {
-        marginLeft: 'auto',
-        background: "white",
-        color: '#5DE75A',
-        border: 'solid 2px #5DE75A',
-        '&:hover': {
-            background: '#5DE75A',
-            color: 'white'
-        }
+        ...primaryBtn
     },
     toolbarIcon: {
         marginRight:'10px',

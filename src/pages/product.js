@@ -1,6 +1,7 @@
 import React from 'react';
 import ItemDescription from '../components/itemDescription';
 import { data } from '../data/testData1';
+import Nav from '../components/nav';
 
 const Product = (props) => {
     // need to query database by ID and render properties
@@ -8,6 +9,7 @@ const Product = (props) => {
 
     return (
         <>
+        <Nav />
         <ItemDescription {...product} />
         </>
     );
