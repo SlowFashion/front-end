@@ -1,15 +1,15 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography, Divider, Avatar, Button } from '@material-ui/core';
-import {primaryBtn} from '../components/themes/components';
+import { Box, Typography, Divider, Avatar, Button, FormControl, InputLabel, Select } from '@material-ui/core';
+import { primaryBtn } from '../components/themes/components';
 import Parser from 'html-react-parser';
-import {Rating} from '@material-ui/lab';
-import ImageRollover from  './imagePicker';
+import { Rating } from '@material-ui/lab';
+import ImageRollover from './imagePicker';
 
 const useStyles = makeStyles({
     root: {
         display: 'flex',
-        flexFlow: 'row no wrap',
+        flexFlow: 'row wrap',
         alignItems: 'flex-start',
         margin: '100px'
     },
@@ -28,13 +28,13 @@ const useStyles = makeStyles({
 
     },
     description: {
-        margin:'20px 40px',
-        textAlign:'left',
-        maxWidth:'40vw'
+        margin: '20px 40px',
+        textAlign: 'left',
+        maxWidth: '40vw'
     },
     divders: {
         marginTop: '20px',
-        width: '50vw'
+        width: '100%'
     },
     posterDetails: {
         display: 'flex',
@@ -42,51 +42,60 @@ const useStyles = makeStyles({
         alignItems: 'flex-start',
         justifyContent: 'space-around'
     },
+    detailsContainer: {
+        maxWidth: '50%'
+    },
     posterImg: {
         marginRight: '10px',
         height: '75px',
         minWidth: '75px'
     },
-    posterContainer:{
-        display:'flex',
-        flexFlow:'row wrap',
-        justifyContent:'space-between',
-        margin:'20px',
-        alignItems:'center'
+    posterContainer: {
+        display: 'flex',
+        flexFlow: 'row wrap',
+        justifyContent: 'space-between',
+        margin: '20px',
+        alignItems: 'center'
     },
-    cartBtn:{
+    cartBtn: {
         ...primaryBtn,
-        height:'50px'
+        minWidth: '-webkit-fill-available',
+        margin: '5px 40px',
     },
-    ratings:{
-        display:'flex',
-        flexDirection:'row',
-        alignItems:'center'
+    ratings: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    optionDetails: {
+        borderBottom: '1px solid grey',
+        margin: '20px 40px',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: 'inherit'
+    },
+    buyNowBtn: {
+        width: '-webkit-fill-available',
+        margin: '5px 40px',
+        border: '1px solid black',
+        transition: '.5',
+        '&:hover': {
+            background: 'black',
+            color: 'white'
+        }
     },
     price:{
-        borderBottom:'1px solid grey',
-        margin:'20px 40px',
         display:'flex',
         flexDirection:'row',
-        justifyContent:'space-between',
-        alignItems:'center',
-        width:'100%'
-    },
-    buyNowBtn:{
-        width:'100%',
-        margin:'20px 40px',
-        border:'1px solid black',
-        transition:'.5',
-        '&:hover':{
-            background:'black',
-            color:'white'
-        }
+        justifyContent:'space-around'
     }
 
 });
 
 
-const ItemDescription = ({ name, category, image, price, madeBy, location, rating, numReviews, description, size, imageLib}) => {
+const ItemDescription = ({ name, category, image, price, madeBy, location, rating, numReviews, description, size, imageLib }) => {
     console.log(image)
     const classes = useStyles();
 
@@ -112,24 +121,41 @@ const ItemDescription = ({ name, category, image, price, madeBy, location, ratin
                         </Box>
                     </Box>
 
-                    <Button className={classes.cartBtn}>Add To Cart</Button>
+
                 </Box>
+
                 <Divider className={classes.divders} />
-                <Box className={classes.description}>
-                    <Typography> {Parser(description)} </Typography>
+                <Box className={classes.optionDetails}>
+                    <Box className={classes.price}>
+                    <Typography variant='subtitle1'>Price &nbsp;</Typography>
+                    <Typography style={{ color: '#B12704' }} variant='subtitle1'>{price}</Typography>
+                    </Box>
+                    <FormControl variant="filled" className={classes.formControl}>
+                        <InputLabel htmlFor="qty">Qty</InputLabel>
+                        <Select
+                            value={1}
+                        >
+                            <option value={1} >1 </option>
+                            <option value={2}>2</option>
+                            
+                        </Select>
+                    </FormControl>
+
                 </Box>
-                <Box className={classes.price}>
-                    <Typography variant='subtitle1'>Price</Typography>
-                    <Typography style={{color:'#B12704'}} variant='subtitle1'>{price}</Typography>
-                </Box>
-                <Box className={classes.price}>
+
+                <Box className={classes.optionDetails}>
                     <Typography variant='subtitle1'>Size</Typography>
                     <Typography variant='subtitle1'>{size}</Typography>
                 </Box>
+                <Button className={classes.cartBtn}>Add To Cart</Button>
                 <Button size='large' className={classes.buyNowBtn}>Buy Now</Button>
+
+                <Box className={classes.description}>
+                    <Typography> {Parser(description)} </Typography>
+                </Box>
+
+
             </Box>
-
-
         </Box>
 
 
